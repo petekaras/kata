@@ -1,11 +1,9 @@
 package com.peter;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import java.util.Arrays;
 import java.util.Collection;
-
-import junit.framework.Assert;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -31,7 +29,7 @@ public class StringCalculatorTest {
 
   @Parameters
   public static Collection<Object[]> data() {
-    return Arrays.asList(new Object[][] { { "", 0 }, { "1", 1 }, { "1,2", 3 }, { "1,6,12,456", 475 } });
+    return Arrays.asList(new Object[][] { { "", 0 }, { "1", 1 }, { "1,2", 3 }, { "1,6,12,456", 475 },{ "1,6\n12,456", 475 },{ "//;\n1;6\n12;456", 475 } });
   }
 
   @Test
