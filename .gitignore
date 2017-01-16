@@ -9,3 +9,6 @@ target
 #Gradle
 build
 .gradle
+*.iml
+*.log
+/.idea
